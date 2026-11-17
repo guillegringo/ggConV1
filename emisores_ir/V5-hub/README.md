@@ -25,7 +25,7 @@ USB (+5V rojo, GND negro) ──► [ barra +5V ] ──► rojo de las 4 salida
                               [ barra GND ] ──► negro de las 4 salidas
                               (opcional: +5V ─ 1 kΩ ─ LED testigo ─ GND)
 ```
-- Cada salida va a **una sola** cápsula. Las cápsulas ya traen su resistencia de 22 Ω adentro, así que en el hub no hace falta ninguna.
+- Cada salida va a **una sola** cápsula. Las cápsulas ya traen sus resistencias adentro, así que en el hub no hace falta ninguna.
 - Las orejas laterales tienen agujeros de Ø3,6 para tornillos de madera, o podés pegar el hub con doble faz.
 
 ## Archivos en esta carpeta

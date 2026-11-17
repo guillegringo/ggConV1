@@ -25,11 +25,11 @@ No usa la horquilla: queda fija, mirando derecho hacia adelante.
 
 **Impresión:** el cuerpo va con la brida para abajo, así los agujeros de los LEDs quedan verticales y prolijos. El clip y la tapa van planos. Sin soportes.
 
-**Material:** 3 LEDs IR, 1 resistencia de 22 Ω y cable. No lleva tornillos ni inserts.
+**Material:** 3 LEDs IR, sus resistencias (3 de 100 Ω o 1 de 22 Ω, según el [circuito](../V0-capsula/README.md#circuito-elegí-según-tus-leds)) y cable. No lleva tornillos ni inserts.
 
 ## Armado
 1. Hacé el agujero de 30 mm en el panel.
-2. Metá los LEDs desde atrás en los agujeros del frente y soldalos en serie con la resistencia, igual que en la [cápsula](../V0-capsula/README.md).
+2. Metá los LEDs desde atrás en los agujeros del frente y soldalos con sus resistencias, igual que en la [cápsula](../V0-capsula/README.md).
 3. Pasá el cable por la tapita, empujala hasta que entre y calzá el cuerpo en el panel desde adelante.
 4. Por atrás, empujá el clip en C dentro de la ranura. Tiene una orejita para sacarlo.
 

@@ -10,7 +10,7 @@ Acá cada punto es una **cápsula** con 3 LEDs IR. La cápsula se monta sobre un
 ```
           CÁPSULA (se suelda una sola vez)                 SOPORTES (se imprimen según el escenario)
    ┌──────────────────────────────┐                ┌──────────────┐  V1 base: mueble o tele gruesa
-   │  ●  ●  ●   3 LEDs IR + 22 Ω  │── pestaña ──►  │  horquilla   │  V2 gancho: borde de tele finita
+   │  ●  ●  ●   3 LEDs IR + R     │── pestaña ──►  │  horquilla   │  V2 gancho: borde de tele finita
    └──────────────────────────────┘    M3 × 16     │  estándar    │  V3 pared: proyector o tele colgada
                                                    └──────────────┘
    V4 arcade: cápsula redonda que se empotra en un agujero de botón de 30 mm
@@ -34,7 +34,7 @@ Todos los soportes V1 a V3 terminan en la misma **horquilla estándar**, que tie
 - Las ideas que quedaron para más adelante están en [ideas-futuras.md](ideas-futuras.md).
 
 ## Circuito (igual para todas las versiones)
-Cada cápsula lleva una resistencia de 22 Ω y 3 LEDs IR en serie. Las 4 cápsulas van en paralelo, alimentadas con 5 V desde un USB.
+Cada cápsula lleva 3 LEDs IR. Las 4 cápsulas van en paralelo, alimentadas con 5 V desde un USB. Hay dos formas de conectar los LEDs según cuánta tensión caiga en cada uno; están explicadas en [V0-capsula](V0-capsula/README.md#circuito-elegí-según-tus-leds). El dibujo de abajo es la **opción B**, en serie.
 ![circuito](circuito.svg)
 
 ## Archivos

@@ -26,33 +26,50 @@ Los modelos son paramétricos. Si cambiás una medida arriba del script, regener
 
 ---
 
-## Lista de compras: todo en Candy-HO
-Precios vistos el 17/11/2026. Pueden cambiar.
+## Lista de compras
+Hay dos tiendas de Buenos Aires. **Emakers** tiene casi todo, incluidos los LEDs IR, así que con un solo viaje alcanza. **Candy-HO** sirve de alternativa para lo que falte.
+Precios y stock verificados el 17/11/2026. Pueden cambiar.
 
-### ⚠️ Los LEDs IR no están publicados en Candy-HO
-En la web de Candy-HO **no hay LEDs emisores infrarrojos** (ni de 940 ni de 850 nm, ni el módulo KY-005 suelto). Solo venden receptores y sensores.
-Antes de comprar, **escribiles por WhatsApp** y preguntá si tienen sin publicar: *"LED emisor infrarrojo 940 nm 5 mm, x12"* (por ejemplo IR333C, TSAL6200 o SFH 4547).
-Si no tienen, esos 12 LEDs son lo único que hay que conseguir en otro lado. Las cajas están diseñadas para **cualquier LED IR de 5 mm**.
+### Opción recomendada: todo en Emakers
+**Emakers**: Alsina 1761, Congreso, CABA. Abre de lunes a viernes de 9 a 18. Tel. 4372-9492. [emakers.com.ar](https://www.emakers.com.ar)
 
-### Pistola
-| Qué | Cant. | Producto | Precio |
-|---|---|---|---|
-| Microswitch del gatillo | 2 (1 de repuesto) | [Microswitch SPDT con palanca 1A 125V, SKU 8184](https://candy-ho.com/producto/microswitch-final-de-carrera-spdt-palanca-roller-1a-125v-arduino/) | $590 c/u |
-| Pulsadores 12×12×7,3 | 5 (1 de repuesto) | [Tact Switch B3F-4055, SKU 2506](https://candy-ho.com/producto/boton-switch-tact-b3f-4055-push-button-generico-12x12x7-3/) | $190 c/u |
-| Cable para la pistola (si no tenés uno) | 1 | [Cable USB tipo C de 1 m, SKU 6601](https://candy-ho.com/producto/cable-usb-tipo-c-1-metro-generico/) | $2.732 |
+| Qué | Cant. | Producto | Precio | Stock |
+|---|---|---|---|---|
+| LEDs IR de 940 nm y 5 mm | **2 packs** (20 LEDs) | [Led Infrarrojo Emisor 5mm x10](https://www.emakers.com.ar/tienda/diodos-modulos-y-matrices-led/diodos-led-unitarios/led-infrarrojo-emisor-5mm-de-diametro-x10-unidades) | $872 c/pack | ✅ |
+| Resistencias de 100 Ω (una por LED) | 1 kit x50 | [Kit 50 resistencias 100 Ω 1/4 W 1%](https://www.emakers.com.ar/tienda/componentes-electronicos/resistencias/kit-50-resistencias-100-ohm-14w-metal-film-con-1-tolerancia) | $1.453 | ✅ |
+| Pulsadores 12×12 (A, B, Start, Select + 1 de repuesto) | 5 | [Tact Switch 4 patas 12x12x7.5](https://www.emakers.com.ar/tienda/componentes-electronicos/pulsadores-interruptores/tact-switch-4-patas-12x12x75-em5-5720) | $203 c/u | ✅ |
+| Termocontraíble | 1 kit | [Kit termocontraíble 127 piezas](https://www.emakers.com.ar/tienda/componentes-electronicos/kits-de-componentes/kit-termocontraible-127pcs-negro-varias-medidas) | $3.872 | ✅ |
+| Cable para alimentar y unir los emisores | 4 | [Cable de carga micro USB de 1 m](https://www.emakers.com.ar/tienda/modulos-alimentacion-y-pilas/cargadores/cable-de-carga-microusb-de-1m-em1109). Se corta y se usan los hilos rojo y negro. Uno conserva la ficha USB-A para enchufar | $2.904 c/u | ✅ |
+| Microswitch del gatillo | ver ⚠️ | [Micro Switch final de carrera 5 A, 20×10×6 mm](https://www.emakers.com.ar/tienda/componentes-electronicos/pulsadores-interruptores/micro-switch-final-de-carrera-5a-250v-cnc-leva-corta) | $812 | ✅ |
 
-### Emisores IR (4 cajas)
-| Qué | Cant. | Producto | Precio |
-|---|---|---|---|
-| LEDs IR de 940 nm y 5 mm | 12 (mejor 15) | **Consultar por WhatsApp** (ver arriba) | – |
-| Resistencias de 22 Ω y 1/4 W | 1 pack x10 | [Buscar "resistencia 22 ohm"](https://candy-ho.com/?s=resistencia+22+ohm&post_type=product) (carbón SKU 1415 o metal SKU 1431) | $410 |
-| Cable de alimentación y para unir las cajas | 4 | [Cable USB tipo C de 1 m, SKU 6601](https://candy-ho.com/producto/cable-usb-tipo-c-1-metro-generico/). Se corta y se usan los hilos rojo y negro. Uno conserva la ficha USB-A para enchufar. | $2.732 c/u |
-| Cinta doble faz | 1 | [Bifaz de 12 mm × 10 m, SKU 4920](https://candy-ho.com/producto/cinta-adhesiva-bifaz-doble-faz-12-mm-x-10-mts/) | $2.990 |
-| Termocontraíble | 1 kit | [Kit de 127 piezas, SKU 6164](https://candy-ho.com/producto/kit-termocontraible-tubos-7-tamanos-combo-127-piezas/) | $4.770 |
-| *Opcional:* conector para desenchufar cada caja | 4 | [JST RCY de 2 pines con cable, SKU 4025](https://candy-ho.com/producto/conector-jst-rcy-2-pines-pitch-2-5mm-siliconado-10cm/) | $490 c/u |
-| *Opcional:* estaño | 1 | [Estaño 60/40 de 1 mm, 100 g, SKU 6179](https://candy-ho.com/producto/estano-en-rollo-1mm-60-40-0-1kg-soldadura-rollo-100gr/) | $15.561 |
+**Total en Emakers:** unos **$19.700**, más el microswitch.
 
-**Total sin LEDs y sin opcionales:** unos $22.700, o $25.400 con el cable de la pistola.
+⚠️ **Microswitch:** el de Emakers mide **20 × 10 × 6 mm**, y la pistola está diseñada para uno **subminiatura de 12,8 × 6,5 × 5,8 mm**. Hay dos caminos:
+- Adaptar el alojamiento de la pistola al de 20 × 10 mm, que es el tamaño más fácil de conseguir. Es un cambio de parámetros en `pistola/pistola_fc.py`.
+- Comprar el subminiatura en Candy-HO (ver abajo).
+
+⚠️ **Pulsadores:** los de Emakers miden 7,5 mm de alto y los del diseño 7,3 mm. Antes de imprimir, medí cuánto sobresale el vástago del cuerpo y ajustá `TACT_BODY` y `TACT_STEM` en `pistola/pistola_fc.py`.
+
+**No hay en Emakers:** cinta doble faz. Sirve cualquiera de espuma de librería o ferretería, o la de Candy-HO.
+
+### Alternativa o complemento: Candy-HO
+| Qué | Producto | Precio |
+|---|---|---|
+| Microswitch subminiatura del gatillo | [Microswitch SPDT con palanca 1A 125V, SKU 8184](https://candy-ho.com/producto/microswitch-final-de-carrera-spdt-palanca-roller-1a-125v-arduino/). Antes de comprar, confirmá en el local que mida unos 12,8 × 6,5 × 5,8 mm | $590 |
+| Pulsadores 12×12×7,3 | [Tact Switch B3F-4055, SKU 2506](https://candy-ho.com/producto/boton-switch-tact-b3f-4055-push-button-generico-12x12x7-3/) | $190 c/u |
+| Resistencias de 100 Ω x10 | [Buscar "resistencia 100 ohm"](https://candy-ho.com/?s=resistencia+100+ohm&post_type=product) (SKU 1403 o 1429) | $410 |
+| Cinta doble faz | [Bifaz de 12 mm × 10 m, SKU 4920](https://candy-ho.com/producto/cinta-adhesiva-bifaz-doble-faz-12-mm-x-10-mts/) | $2.990 |
+| Termocontraíble | [Kit de 127 piezas, SKU 6164](https://candy-ho.com/producto/kit-termocontraible-tubos-7-tamanos-combo-127-piezas/) | $4.770 |
+| Cable USB tipo C de 1 m | [SKU 6601](https://candy-ho.com/producto/cable-usb-tipo-c-1-metro-generico/) | $2.732 |
+| *Opcional:* conector para desenchufar cada emisor | [JST RCY de 2 pines, SKU 4025](https://candy-ho.com/producto/conector-jst-rcy-2-pines-pitch-2-5mm-siliconado-10cm/) | $490 c/u |
+| *Opcional:* estaño | [Estaño 60/40 de 1 mm, 100 g, SKU 6179](https://candy-ho.com/producto/estano-en-rollo-1mm-60-40-0-1kg-soldadura-rollo-100gr/) | $15.561 |
+
+Candy-HO **no tiene LEDs IR**. Esos van sí o sí en Emakers.
+
+### Sobre los LEDs IR
+- La comunidad de GUN4IR recomienda el **Osram SFH 4547**, pero en Argentina no se consigue sin traerlo de afuera.
+- Los genéricos de 940 nm de Emakers alcanzan para jugar a 2 o 3 m. Antes de armar las 4 cápsulas, **probá una sola** con GUN4IR utils.
+- Con estos LEDs (1,7 V, 50 mA) cada LED va con **su propia resistencia de 100 Ω**, unos 35 mA cada uno. Está explicado en [V0-capsula](emisores_ir/V0-capsula/README.md).
 
 ### Lo que ya tenés
 - Cámara DFRobot SEN0158
@@ -101,7 +118,7 @@ Antes de imprimir, **medí con calibre** la cámara y el microswitch. Si no coin
 ---
 
 ## Emisores IR: sistema modular
-Son 4 **cápsulas** iguales, cada una con **3 LEDs IR de 5 mm en serie y una resistencia de 22 Ω**. Cada cápsula se monta sobre el **soporte** que corresponda a tu setup: tele finita, tele gruesa, tele colgada, proyector o arcade. Si cambiás de setup, cambiás solo el soporte y no volvés a soldar.
+Son 4 **cápsulas** iguales, cada una con **3 LEDs IR de 5 mm**. Con los LEDs de Emakers, cada LED lleva su propia resistencia de 100 Ω. Cada cápsula se monta sobre el **soporte** que corresponda a tu setup: tele finita, tele gruesa, tele colgada, proyector o arcade. Si cambiás de setup, cambiás solo el soporte y no volvés a soldar.
 
 | | | |
 |---|---|---|
