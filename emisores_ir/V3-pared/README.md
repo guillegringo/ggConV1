@@ -2,7 +2,7 @@
 
 | Proyector (S00) | Tele colgada (S40, invertido abajo) |
 |---|---|
-| ![proyector](../renders/v3_proyector.png) | ![colgada](../renders/v3_tele_colgada.png) |
+| ![proyector](v3_proyector.png) | ![colgada](v3_tele_colgada.png) |
 
 Es una placa que se atornilla a la pared, con un estante para la horquilla estándar y dos nervios que la refuerzan. Funciona **derecha**, arriba de la imagen, o **invertida**, abajo.
 
@@ -12,8 +12,8 @@ Es una placa que se atornilla a la pared, con un estante para la horquilla está
 
 | STL | Separador | Para qué |
 |---|---|---|
-| `stl/v3_pared_S00.stl` | 0 mm | Proyector o pared directa |
-| `stl/v3_pared_S40.stl` | 40 mm | Tele colgada con un soporte que la separa unos 40 a 50 mm de la pared. Así los LEDs quedan cerca del frente de la tele |
+| `v3_pared_S00.stl` | 0 mm | Proyector o pared directa |
+| `v3_pared_S40.stl` | 40 mm | Tele colgada con un soporte que la separa unos 40 a 50 mm de la pared. Así los LEDs quedan cerca del frente de la tele |
 
 Si tu soporte de pared deja la tele a otra distancia, cambiá `WALL_STANDOFFS` en `emisor_fc.py`. Por ejemplo `(0, 25, 60)`.
 
@@ -32,3 +32,15 @@ Si tu soporte de pared deja la tele a otra distancia, cambiá `WALL_STANDOFFS` e
 
 ## Tip para proyector
 Los LEDs quedan lejos de la PC. En vez de tirar un cable USB de 5 m, usá el **hub V5** con un **power bank**: 4 cápsulas consumen unos 200 mA, así que uno de 5000 mAh dura más de 20 horas.
+
+## Archivos en esta carpeta
+| Archivo | Qué es |
+|---|---|
+| `capsula_cabezal.stl` | Cápsula: cabezal (la misma de [V0](../V0-capsula/README.md), copiada para que tengas todo acá) |
+| `capsula_tapa.stl` | Cápsula: tapa con pestaña de bisagra (copia de V0) |
+| `v3_pared_S00.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v3_pared_S40.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v3_proyector.png` | Render |
+| `v3_tele_colgada.png` | Render |
+
+**Para un set de 4 emisores imprimí:** 4 × `capsula_cabezal.stl` + 4 × `capsula_tapa.stl` + 4 soportes de esta carpeta (o 2 de esta y 2 de otra variante, según tu [escenario](../escenarios.md)).

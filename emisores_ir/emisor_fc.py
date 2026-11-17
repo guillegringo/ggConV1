@@ -20,10 +20,16 @@ import Part, MeshPart
 from FreeCAD import Vector as V
 
 HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.getcwd()
-OUT = os.path.join(HERE, "stl")
 SCN = os.path.join(HERE, "escenas")
-for d in (OUT, SCN):
+os.makedirs(SCN, exist_ok=True)
+# cada variante es una carpeta con sus STL, renders y README
+VARIANTES = {"capsula": "V0-capsula", "v1": "V1-base", "v2": "V2-gancho",
+             "v3": "V3-pared", "v4": "V4-arcade", "v5": "V5-hub"}
+
+def vpath(name):
+    d = os.path.join(HERE, VARIANTES[name.split("_")[0]])
     os.makedirs(d, exist_ok=True)
+    return os.path.join(d, name)
 
 # =========================== capsula ===========================
 HEAD_W, HEAD_H, HEAD_D = 46.0, 18.0, 20.0
@@ -331,20 +337,20 @@ def main():
     hub, hub_lid = make_hub(), make_hub_lid()
 
     print("== piezas para imprimir ==")
-    sizes["capsula_cabezal"] = export(flat(head, V(1, 0, 0), 90), os.path.join(OUT, "capsula_cabezal.stl"))
+    sizes["capsula_cabezal"] = export(flat(head, V(1, 0, 0), 90), vpath("capsula_cabezal.stl"))
     l = lid.copy(); l.rotate(V(0, 0, 0), V(1, 0, 0), 90)
-    sizes["capsula_tapa"] = export(flat(l), os.path.join(OUT, "capsula_tapa.stl"))
-    sizes["v1_base"] = export(flat(base), os.path.join(OUT, "v1_base.stl"))
+    sizes["capsula_tapa"] = export(flat(l), vpath("capsula_tapa.stl"))
+    sizes["v1_base"] = export(flat(base), vpath("v1_base.stl"))
     for T, c in clips.items():
-        sizes["v2_gancho_T%02d" % T] = export(flat(c, V(0, 1, 0), 90), os.path.join(OUT, "v2_gancho_T%02d.stl" % T))
+        sizes["v2_gancho_T%02d" % T] = export(flat(c, V(0, 1, 0), 90), vpath("v2_gancho_T%02d.stl" % T))
     for S, w in walls.items():
-        sizes["v3_pared_S%02d" % S] = export(flat(w, V(0, 1, 0), 90), os.path.join(OUT, "v3_pared_S%02d.stl" % S))
+        sizes["v3_pared_S%02d" % S] = export(flat(w, V(0, 1, 0), 90), vpath("v3_pared_S%02d.stl" % S))
     for P, (body, yg, ye) in arcs.items():
-        sizes["v4_arcade_cuerpo_P%02d" % P] = export(flat(body, V(1, 0, 0), -90), os.path.join(OUT, "v4_arcade_cuerpo_P%02d.stl" % P))
-        sizes["v4_arcade_tapa_P%02d" % P] = export(flat(make_arcade_cap(ye), V(1, 0, 0), -90), os.path.join(OUT, "v4_arcade_tapa_P%02d.stl" % P))
-    sizes["v4_arcade_clip"] = export(flat(make_arcade_clip(arcs[ARC_PANELS[0]][1]), V(1, 0, 0), -90), os.path.join(OUT, "v4_arcade_clip.stl"))
-    sizes["v5_hub_caja"] = export(flat(hub), os.path.join(OUT, "v5_hub_caja.stl"))
-    sizes["v5_hub_tapa"] = export(flat(hub_lid, V(1, 0, 0), 180), os.path.join(OUT, "v5_hub_tapa.stl"))
+        sizes["v4_arcade_cuerpo_P%02d" % P] = export(flat(body, V(1, 0, 0), -90), vpath("v4_arcade_cuerpo_P%02d.stl" % P))
+        sizes["v4_arcade_tapa_P%02d" % P] = export(flat(make_arcade_cap(ye), V(1, 0, 0), -90), vpath("v4_arcade_tapa_P%02d.stl" % P))
+    sizes["v4_arcade_clip"] = export(flat(make_arcade_clip(arcs[ARC_PANELS[0]][1]), V(1, 0, 0), -90), vpath("v4_arcade_clip.stl"))
+    sizes["v5_hub_caja"] = export(flat(hub), vpath("v5_hub_caja.stl"))
+    sizes["v5_hub_tapa"] = export(flat(hub_lid, V(1, 0, 0), 180), vpath("v5_hub_tapa.stl"))
 
     print("== escenas ==")
     # V1: tele gruesa vieja (arriba) - capsula sobre la tapa de la tele, inclinada hacia abajo
@@ -397,7 +403,12 @@ def main():
     # V5: hub
     scene("v5_hub", [hub, placed(hub_lid, None, V(0, 0, 14))], [cyl_z(0, 0, 1.5, HUB_H + 14, HUB_H + 19)], None, None)
 
-    json.dump(sizes, open(os.path.join(OUT, "medidas.json"), "w"), indent=1)
+    json.dump(sizes, open(os.path.join(HERE, "medidas.json"), "w"), indent=1)
+    # la capsula tambien va en cada variante que la usa (carpeta autocontenida)
+    import shutil
+    for v in ("V1-base", "V2-gancho", "V3-pared"):
+        for f in ("capsula_cabezal.stl", "capsula_tapa.stl"):
+            shutil.copy(vpath(f), os.path.join(HERE, v, f))
     print("OK")
 
 main()

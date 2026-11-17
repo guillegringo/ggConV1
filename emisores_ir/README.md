@@ -3,7 +3,7 @@
 GUN4IR necesita **4 puntos IR** alrededor de la pantalla. La cámara de la pistola los ve y con ellos calcula adónde apuntás.
 Acá cada punto es una **cápsula** con 3 LEDs IR. La cápsula se monta sobre un **soporte**, que se elige según dónde jugás: una tele finita, una tele gruesa, una tele colgada, un proyector o un mueble arcade.
 
-![piezas](renders/piezas_para_imprimir.png)
+![piezas](piezas_para_imprimir.png)
 
 ## La idea: una cápsula y muchos soportes
 
@@ -23,15 +23,15 @@ Todos los soportes V1 a V3 terminan en la misma **horquilla estándar**, que tie
 
 | | Versión | Para qué sirve | Ficha |
 |---|---|---|---|
-| ![](renders/v1_tele_gruesa.png) | **V1: base** | Arriba de una tele gruesa o vieja, o apoyada en el mueble | [01-base.md](versiones/01-base.md) |
-| ![](renders/v2_tele_finita.png) | **V2: gancho** | Se cuelga del borde de una tele finita o un monitor, sin pegamento. Hay 4 tamaños | [02-gancho.md](versiones/02-gancho.md) |
-| ![](renders/v3_proyector.png) | **V3: pared** | Se atornilla a la pared, para proyector o tele colgada. Tiene separador opcional | [03-pared.md](versiones/03-pared.md) |
-| ![](renders/v4_arcade_frente.png) | **V4: arcade** | Se empotra en un agujero de 30 mm en un bartop, mueble arcade o marco de madera | [04-arcade.md](versiones/04-arcade.md) |
-| ![](renders/v5_hub.png) | **V5: hub** | Caja de empalme para cablear en estrella en vez de en cadena | [05-hub.md](versiones/05-hub.md) |
+| ![](V1-base/v1_tele_gruesa.png) | **V1: base** | Arriba de una tele gruesa o vieja, o apoyada en el mueble | [V1-base](V1-base/README.md) |
+| ![](V2-gancho/v2_tele_finita.png) | **V2: gancho** | Se cuelga del borde de una tele finita o un monitor, sin pegamento. Hay 4 tamaños | [V2-gancho](V2-gancho/README.md) |
+| ![](V3-pared/v3_proyector.png) | **V3: pared** | Se atornilla a la pared, para proyector o tele colgada. Tiene separador opcional | [V3-pared](V3-pared/README.md) |
+| ![](V4-arcade/v4_arcade_frente.png) | **V4: arcade** | Se empotra en un agujero de 30 mm en un bartop, mueble arcade o marco de madera | [V4-arcade](V4-arcade/README.md) |
+| ![](V5-hub/v5_hub.png) | **V5: hub** | Caja de empalme para cablear en estrella en vez de en cadena | [V5-hub](V5-hub/README.md) |
 
-- La cápsula y la horquilla se documentan en [00-capsula.md](versiones/00-capsula.md).
+- La cápsula y la horquilla se documentan en [V0-capsula](V0-capsula/README.md).
 - **¿No sabés cuál usar?** Mirá la guía por escenario en [escenarios.md](escenarios.md).
-- Las ideas que quedaron para más adelante están en [ideas-futuras.md](versiones/ideas-futuras.md).
+- Las ideas que quedaron para más adelante están en [ideas-futuras.md](ideas-futuras.md).
 
 ## Circuito (igual para todas las versiones)
 Cada cápsula lleva una resistencia de 22 Ω y 3 LEDs IR en serie. Las 4 cápsulas van en paralelo, alimentadas con 5 V desde un USB.
@@ -41,10 +41,11 @@ Cada cápsula lleva una resistencia de 22 Ω y 3 LEDs IR en serie. Las 4 cápsul
 | Ruta | Qué es |
 |---|---|
 | `emisor_fc.py` | Modelo paramétrico de FreeCAD: todas las versiones, con los parámetros arriba de todo |
-| `stl/` | Piezas listas para imprimir, ya orientadas en la cama. Las medidas están en `stl/medidas.json` |
-| `escenas/` | Piezas posicionadas dentro de cada escena, solo para los renders |
+| `V0-capsula/` … `V5-hub/` | **Una carpeta por variante**, con sus STL listos para imprimir, sus renders y su README |
+| `medidas.json` | Medidas de cada pieza |
+| `escenas/` | Piezas posicionadas para los renders (se regenera; no está en el repo) |
 | `render_emisor.py` | Renders de Blender |
-| `renders/` | Imágenes |
+| `piezas_para_imprimir.png` | Lámina con todas las piezas |
 
 Para regenerar todo:
 ```

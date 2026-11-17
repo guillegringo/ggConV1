@@ -7,7 +7,7 @@ Esta versión es la básica: no tiene solenoide ni vibración.
 
 | | |
 |---|---|
-| ![interior](pistola/renders/05_interior_34.png) | ![emisor](emisores_ir/renders/v2_tele_finita.png) |
+| ![interior](pistola/renders/05_interior_34.png) | ![emisor](emisores_ir/V2-gancho/v2_tele_finita.png) |
 
 Video del ensamblado: [`pistola/renders/ensamblado.mp4`](pistola/renders/ensamblado.mp4)
 
@@ -105,10 +105,10 @@ Son 4 **cápsulas** iguales, cada una con **3 LEDs IR de 5 mm en serie y una res
 
 | | | |
 |---|---|---|
-| ![](emisores_ir/renders/v2_tele_finita.png) | ![](emisores_ir/renders/v3_proyector.png) | ![](emisores_ir/renders/v4_arcade_frente.png) |
+| ![](emisores_ir/V2-gancho/v2_tele_finita.png) | ![](emisores_ir/V3-pared/v3_proyector.png) | ![](emisores_ir/V4-arcade/v4_arcade_frente.png) |
 
 - **[Índice de los emisores IR](emisores_ir/README.md)**: las 5 versiones (base, gancho, pared, arcade y hub) y el circuito.
 - **[Guía por escenario](emisores_ir/escenarios.md)**: qué soporte usar en cada setup y cuánto inclinar las cápsulas.
-- **[Ideas futuras](emisores_ir/versiones/ideas-futuras.md)**
+- **[Ideas futuras](emisores_ir/ideas-futuras.md)**
 
 **Antes de cerrar las cápsulas, probá los LEDs.** La luz IR no se ve a simple vista, pero la cámara del celular sí la muestra (en muchos celulares solo la cámara frontal). Si conseguís LEDs con otra tensión de trabajo (Vf), recalculá la resistencia: R = (5 − 3·Vf) / I, con I entre 40 y 70 mA.

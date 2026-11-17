@@ -1,6 +1,6 @@
 # V1: base con doble faz
 
-![v1](../renders/v1_tele_gruesa.png)
+![v1](v1_tele_gruesa.png)
 
 Es una placa plana de 40 × 30 mm con la horquilla estándar. Es la versión más simple y la que más se adapta.
 
@@ -11,7 +11,7 @@ Es una placa plana de 40 × 30 mm con la horquilla estándar. Es la versión má
 
 | Pieza | STL | Medidas | Impresión |
 |---|---|---|---|
-| Base | `stl/v1_base.stl` | 40 × 30 × 25 mm | Plana, sin soportes |
+| Base | `v1_base.stl` | 40 × 30 × 25 mm | Plana, sin soportes |
 
 **Material:** 1 heat insert M3 (en la oreja de la horquilla), 1 tornillo M3×16 y cinta doble faz (Candy-HO SKU 4920).
 
@@ -25,3 +25,13 @@ Es una placa plana de 40 × 30 mm con la horquilla estándar. Es la versión má
 - ✅ Anda en cualquier superficie plana.
 - ⚠️ Depende de la cinta. En plásticos texturados conviene una doble faz de espuma más gruesa.
 - ⚠️ En una tele finita no hay superficie arriba. Para eso está la V2.
+
+## Archivos en esta carpeta
+| Archivo | Qué es |
+|---|---|
+| `capsula_cabezal.stl` | Cápsula: cabezal (la misma de [V0](../V0-capsula/README.md), copiada para que tengas todo acá) |
+| `capsula_tapa.stl` | Cápsula: tapa con pestaña de bisagra (copia de V0) |
+| `v1_base.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v1_tele_gruesa.png` | Render |
+
+**Para un set de 4 emisores imprimí:** 4 × `capsula_cabezal.stl` + 4 × `capsula_tapa.stl` + 4 soportes de esta carpeta (o 2 de esta y 2 de otra variante, según tu [escenario](../escenarios.md)).

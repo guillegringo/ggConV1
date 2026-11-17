@@ -1,6 +1,6 @@
 # V5: hub (caja de empalme)
 
-![hub](../renders/v5_hub.png)
+![hub](v5_hub.png)
 
 Es una caja chica: **entra 1 cable USB y salen 4 cables**, uno por cápsula. Reemplaza el cableado en cadena por uno **en estrella**.
 
@@ -12,8 +12,8 @@ Es una caja chica: **entra 1 cable USB y salen 4 cables**, uno por cápsula. Ree
 
 | Pieza | STL | Medidas | Impresión |
 |---|---|---|---|
-| Caja | `stl/v5_hub_caja.stl` | 74 × 36 × 20 mm, con orejas | Boca arriba, sin soportes |
-| Tapa | `stl/v5_hub_tapa.stl` | 58 × 36 × 3,5 mm | Plana |
+| Caja | `v5_hub_caja.stl` | 74 × 36 × 20 mm, con orejas | Boca arriba, sin soportes |
+| Tapa | `v5_hub_tapa.stl` | 58 × 36 × 3,5 mm | Plana |
 
 **Material:** 4 heat inserts M3, 4 tornillos M3×10 y un pedazo de placa perforada (Candy-HO SKU 1796) o empalmes con termocontraíble.
 
@@ -27,3 +27,12 @@ USB (+5V rojo, GND negro) ──► [ barra +5V ] ──► rojo de las 4 salida
 ```
 - Cada salida va a **una sola** cápsula. Las cápsulas ya traen su resistencia de 22 Ω adentro, así que en el hub no hace falta ninguna.
 - Las orejas laterales tienen agujeros de Ø3,6 para tornillos de madera, o podés pegar el hub con doble faz.
+
+## Archivos en esta carpeta
+| Archivo | Qué es |
+|---|---|
+| `v5_hub_caja.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v5_hub_tapa.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v5_hub.png` | Render |
+
+**Se imprime 1:** caja + tapa.

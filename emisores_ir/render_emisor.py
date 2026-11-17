@@ -5,8 +5,13 @@ import bpy, math, os, glob
 from mathutils import Vector
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SCN, STL, REN = (os.path.join(HERE, d) for d in ("escenas", "stl", "renders"))
-os.makedirs(REN, exist_ok=True)
+SCN = os.path.join(HERE, "escenas")
+VARIANTES = {"v1": "V1-base", "v2": "V2-gancho", "v3": "V3-pared", "v4": "V4-arcade", "v5": "V5-hub"}
+
+def rpath(fname):
+    """cada render va a la carpeta de su variante; los generales a emisores_ir/"""
+    v = VARIANTES.get(fname.split("_")[0])
+    return os.path.join(HERE, v, fname) if v else os.path.join(HERE, fname)
 
 def reset():
     bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -63,7 +68,7 @@ def shoot(sc, focus, fname, direction=(-0.6, -1.0, 0.55), margin=1.5, lens=50):
     cam.location = center + Vector(direction).normalized() * (r / math.sin(fov / 2))
     cam.rotation_euler = (center - cam.location).to_track_quat("-Z", "Y").to_euler()
     lights(sc, center, r)
-    sc.render.filepath = os.path.join(REN, fname)
+    sc.render.filepath = rpath(fname)
     bpy.ops.render.render(write_still=True)
     print("render", fname)
 
@@ -113,7 +118,10 @@ for scene_name, fname, direction, focus, margin in SHOTS:
 
 # lamina con todas las piezas para imprimir
 sc = reset(); M = mats()
-files = sorted(glob.glob(os.path.join(STL, "*.stl")))
+files, seen = [], set()
+for f in sorted(glob.glob(os.path.join(HERE, "V*", "*.stl"))):
+    if os.path.basename(f) not in seen:          # la capsula esta copiada en varias carpetas
+        seen.add(os.path.basename(f)); files.append(f)
 x = y = 0.0; row_h = 0.0; placed = []
 for f in files:
     o = load(f, M["part"])

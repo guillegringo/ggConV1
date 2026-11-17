@@ -2,7 +2,7 @@
 
 | Montado | Perfil |
 |---|---|
-| ![v2](../renders/v2_tele_finita.png) | ![perfil](../renders/v2_gancho_perfil.png) |
+| ![v2](v2_tele_finita.png) | ![perfil](v2_gancho_perfil.png) |
 
 Es un clip que se cuelga del borde de la tele, **sin pegamento**:
 - Un puente apoya sobre el borde superior.
@@ -18,10 +18,10 @@ Medí con calibre el **espesor del borde de arriba** de tu tele, de adelante hac
 
 | STL | Espesor de tele | Ejemplos típicos |
 |---|---|---|
-| `stl/v2_gancho_T08.stl` | 7 a 9 mm | Teles OLED o QLED de gama alta, monitores finos |
-| `stl/v2_gancho_T12.stl` | 11 a 13 mm | La mayoría de las teles LED actuales |
-| `stl/v2_gancho_T18.stl` | 16 a 19 mm | Teles LED económicas, monitores de oficina |
-| `stl/v2_gancho_T25.stl` | 23 a 26 mm | Teles de hace unos 10 años |
+| `v2_gancho_T08.stl` | 7 a 9 mm | Teles OLED o QLED de gama alta, monitores finos |
+| `v2_gancho_T12.stl` | 11 a 13 mm | La mayoría de las teles LED actuales |
+| `v2_gancho_T18.stl` | 16 a 19 mm | Teles LED económicas, monitores de oficina |
+| `v2_gancho_T25.stl` | 23 a 26 mm | Teles de hace unos 10 años |
 
 Si tu medida no está, cambiá `CLIP_T_LIST` en `emisor_fc.py`, por ejemplo `(10,)`, y regenerá.
 
@@ -42,3 +42,17 @@ Si tu medida no está, cambiá `CLIP_T_LIST` en `emisor_fc.py`, por ejemplo `(10
 | `CLIP_LIP` | 4 | Cuánto baja la pestaña delantera |
 | `CLIP_ARM` | 24 | Largo del brazo trasero |
 | `CLIP_PINCH` | 2° | Cuánto se cierra el brazo. Más grados = más presión |
+
+## Archivos en esta carpeta
+| Archivo | Qué es |
+|---|---|
+| `capsula_cabezal.stl` | Cápsula: cabezal (la misma de [V0](../V0-capsula/README.md), copiada para que tengas todo acá) |
+| `capsula_tapa.stl` | Cápsula: tapa con pestaña de bisagra (copia de V0) |
+| `v2_gancho_T08.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v2_gancho_T12.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v2_gancho_T18.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v2_gancho_T25.stl` | Pieza para imprimir, ya orientada en la cama |
+| `v2_gancho_perfil.png` | Render |
+| `v2_tele_finita.png` | Render |
+
+**Para un set de 4 emisores imprimí:** 4 × `capsula_cabezal.stl` + 4 × `capsula_tapa.stl` + 4 soportes de esta carpeta (o 2 de esta y 2 de otra variante, según tu [escenario](../escenarios.md)).

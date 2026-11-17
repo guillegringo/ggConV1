@@ -4,8 +4,8 @@ La cápsula es la parte que lleva la electrónica. Se arma **una sola vez** y se
 
 | Pieza | STL | Medidas | Impresión |
 |---|---|---|---|
-| Cabezal | `stl/capsula_cabezal.stl` | 46 × 18 × 20 mm | Frente para abajo, sin soportes |
-| Tapa con pestaña | `stl/capsula_tapa.stl` | 46 × 18 × 14 mm | Plana, con la pestaña hacia arriba |
+| Cabezal | `capsula_cabezal.stl` | 46 × 18 × 20 mm | Frente para abajo, sin soportes |
+| Tapa con pestaña | `capsula_tapa.stl` | 46 × 18 × 14 mm | Plana, con la pestaña hacia arriba |
 
 **Material por cápsula:** 3 LEDs IR de 5 mm, 1 resistencia de 22 Ω, 2 heat inserts M3, 2 tornillos M3×10 y un tramo de cable.
 
@@ -36,3 +36,11 @@ Si diseñás un soporte nuevo, usá `fork_solid()` y `fork_cut()` de `emisor_fc.
 | `LED_X` | −9, 0, 9 | Separación entre LEDs |
 | `CABLE_D` | 4,6 | Paso del cable. Medí el tuyo |
 | `INSERT_D` | 4,2 | Agujero para el heat insert M3 |
+
+## Archivos en esta carpeta
+| Archivo | Qué es |
+|---|---|
+| `capsula_cabezal.stl` | Cápsula: cabezal (la misma de [V0](../V0-capsula/README.md), copiada para que tengas todo acá) |
+| `capsula_tapa.stl` | Cápsula: tapa con pestaña de bisagra (copia de V0) |
+
+**Se imprimen 4:** 4 × cabezal + 4 × tapa. Los soportes están en las carpetas V1 a V3.
