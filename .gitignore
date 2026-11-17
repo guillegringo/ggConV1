@@ -1,0 +1,4 @@
+renders/frames/
+__pycache__/
+*.FCBak
+*.blend1
