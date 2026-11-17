@@ -7,14 +7,14 @@ Esta versión es la básica: no tiene solenoide ni vibración.
 
 | | |
 |---|---|
-| ![interior](pistola/renders/05_interior_34.png) | ![emisor](emisores_ir/renders/01_emisor_armado.png) |
+| ![interior](pistola/renders/05_interior_34.png) | ![emisor](emisores_ir/renders/v2_tele_finita.png) |
 
 Video del ensamblado: [`pistola/renders/ensamblado.mp4`](pistola/renders/ensamblado.mp4)
 
 ## Estructura
 ```
 pistola/        modelo CAD (FreeCAD), renders y video (Blender), STL listos para imprimir
-emisores_ir/    caja de los emisores IR (FreeCAD), circuito, STL y renders
+emisores_ir/    emisores IR modulares: cápsula + 5 soportes, circuito, guía por escenario
 firmware/       sketch de prueba de cámara y botones (antes de cargar GUN4IR)
 ```
 Los modelos son paramétricos. Si cambiás una medida arriba del script, regenerás con:
@@ -100,30 +100,15 @@ Antes de imprimir, **medí con calibre** la cámara y el microswitch. Si no coin
 
 ---
 
-## Emisores IR
-Son 4 cajas iguales. Cada una tiene **3 LEDs IR de 5 mm en serie con una resistencia de 22 Ω**. Las 4 van en paralelo, alimentadas con 5 V por USB desde un cargador de celular o un puerto de la PC.
-
-![circuito](emisores_ir/circuito.svg)
+## Emisores IR: sistema modular
+Son 4 **cápsulas** iguales, cada una con **3 LEDs IR de 5 mm en serie y una resistencia de 22 Ω**. Cada cápsula se monta sobre el **soporte** que corresponda a tu setup: tele finita, tele gruesa, tele colgada, proyector o arcade. Si cambiás de setup, cambiás solo el soporte y no volvés a soldar.
 
 | | | |
 |---|---|---|
-| ![armado](emisores_ir/renders/01_emisor_armado.png) | ![despiece](emisores_ir/renders/02_emisor_despiece.png) | ![tele](emisores_ir/renders/04_en_la_tele.png) |
+| ![](emisores_ir/renders/v2_tele_finita.png) | ![](emisores_ir/renders/v3_proyector.png) | ![](emisores_ir/renders/v4_arcade_frente.png) |
 
-**Piezas por caja**, en `emisores_ir/stl/`:
+- **[Índice de los emisores IR](emisores_ir/README.md)**: las 5 versiones (base, gancho, pared, arcade y hub) y el circuito.
+- **[Guía por escenario](emisores_ir/escenarios.md)**: qué soporte usar en cada setup y cuánto inclinar las cápsulas.
+- **[Ideas futuras](emisores_ir/versiones/ideas-futuras.md)**
 
-| Pieza | Descripción | Cómo se imprime |
-|---|---|---|
-| `print_cabezal.stl` | Cabezal de 46 × 18 × 20 mm. Los LEDs entran por el frente y su reborde apoya por dentro | Frente para abajo |
-| `print_tapa.stl` | Tapa trasera con 2 agujeros para el cable (entrada y salida de la cadena) y la pestaña de la bisagra | Plana |
-| `print_base.stl` | Base de 40 × 30 mm que se pega con doble faz. La horquilla y el M3×16 hacen de bisagra a fricción (inclina ±25°) | Plana |
-
-**Armado de cada caja**
-1. Poné un heat insert en cada torreta del cabezal (2) y otro en la horquilla de la base (1).
-2. Metá los 3 LEDs desde adentro hasta que el reborde haga tope.
-3. Soldalos en serie: la pata larga (ánodo) de uno va a la corta (cátodo) del siguiente. La resistencia va en el ánodo del primero.
-4. Pasá el cable por la tapa: el rojo va a la resistencia y el negro al cátodo del último LED. Si la caja no es la última, empalmá ahí el cable que sigue a la próxima.
-5. Cerrá la tapa con 2 × M3×10 y montá el cabezal en la base con un M3×16. Ajustalo lo justo para que mantenga el ángulo.
-
-**Ubicación:** 2 cajas arriba de la tele y 2 abajo, separadas de las esquinas. La posición exacta la indica la guía de colocación de GUN4IR utils. Inclinalas apuntando a donde te parás a jugar.
-
-**Antes de cerrar las cajas, probá los LEDs.** La luz IR no se ve a simple vista, pero la cámara del celular sí la muestra (en muchos celulares solo la cámara frontal). Si conseguís LEDs con otra tensión de trabajo (Vf), recalculá la resistencia: R = (5 − 3·Vf) / I, con I entre 40 y 70 mA.
+**Antes de cerrar las cápsulas, probá los LEDs.** La luz IR no se ve a simple vista, pero la cámara del celular sí la muestra (en muchos celulares solo la cámara frontal). Si conseguís LEDs con otra tensión de trabajo (Vf), recalculá la resistencia: R = (5 − 3·Vf) / I, con I entre 40 y 70 mA.

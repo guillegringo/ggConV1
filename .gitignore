@@ -1,4 +1,5 @@
-renders/frames/
-__pycache__/
 *.FCBak
 *.blend1
+__pycache__/
+renders/frames/
+emisores_ir/escenas/
